@@ -9,11 +9,12 @@ Created a repo for a old school project
 - Responsive (ish) UI
 - Most of app is dynamically created by modifying DOM/CSS
 - Uses KeyboardEvents for the keys
-![image](https://user-images.githubusercontent.com/51844807/216610063-8cf191f3-b7ef-49cb-9965-8eba409b8a9d.png)
 
 
 ### Improvements
+- [ ] Congratulate user upon success
 - [ ] Check word list to see if input is valid
 - [ ] Start over
+- [ ] Play a different wordle clone
 
-![image|500x590](https://user-images.githubusercontent.com/51844807/216609929-7f737f89-bff0-4207-bda0-1f1b18148694.png)
+<img src="https://user-images.githubusercontent.com/51844807/216611721-ec41da0a-9b0f-4f0a-8fd7-879f0f14aba3.png" width="640" height="480">
