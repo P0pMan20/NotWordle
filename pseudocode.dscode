@@ -1,0 +1,76 @@
+//function init
+FUNCTION getrandomword ()
+BEGIN
+    index = randomint(0,array.max)
+    RETURN wordlist[index]
+END
+
+//generate grid
+FUNCTION generategrid (width, height)
+BEGIN
+    FOR i = startValue TO height STEP
+        FOR j = startValue TO width STEP
+            ADD BOX to display
+            SET BOX empty
+        NEXT j
+        ENDFOR
+    NEXT i
+    ENDFOR
+END
+
+keyboardlayout = ["qwertyuiop", "asdfghjkl>","zxcvbnm<"] // < enter/submit > delete
+
+
+FUNCTION generatekeyboard ()
+BEGIN
+    FOR i = startValue TO keyboardlayout.len STEP
+        FOR j = startValue TO keyboardlayout[i].len STEP
+            ADD BOX under grid
+            SET BOX content keyboardlayout[i][j]
+        NEXT j
+        ENDFOR
+    NEXT i
+    ENDFOR
+END
+
+FUNCTION validateword ()
+BEGIN
+    FOREACH letter in word
+        IF letter not in word THEN
+             SET bgcolour of box containing letter to red
+        ELSEIF letter in correct position THEN
+            SET bgcolour of box containing letter to red
+        ELSEIF letter in word but not in correct pos THEN
+            SET bgcolour of box containing letter to yellow
+        ENDIF
+    IF all letters are correct THEN
+        DISPLAY congrats! you have completed the NotWordle
+    ELSEIF last grid row THEN
+        DISPLAY try again you have not completed the NotWordle
+    ENDIF
+
+END
+
+BEGIN
+    getrandomword()
+    generategrid()
+    generatekeyboard()
+    WHILE 1==1
+        IF input==letter THEN
+            IF not at end of grid THEN
+                SET letter to grid box 
+            ENDIF
+
+        ELSEIF if input is delete or backspace THEN
+            IF not at start of grid THEN
+                SET remove letter from wordle grid 
+            ENDIF
+        ELSEIF if input is enter THEN
+            IF at end of grid THEN
+                validateword()
+            ENDIF
+        ENDIF
+    ENDWHILE
+
+
+END
