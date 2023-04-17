@@ -1,6 +1,8 @@
 # NotWordle
 https://p0pman20.github.io/NotWordle/
 
+Code is in index.html, main.js and style.css
+
 Created a repo for a old school project
 - Probably won't ever touch this again
 - Wordle Recreation
