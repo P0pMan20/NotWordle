@@ -16,7 +16,8 @@ Created a repo for a old school project
 ### Improvements
 - [ ] Congratulate user upon success
 - [ ] Check word list to see if input is valid
-- [ ] I should start over
+- [ ] Proper letter checking
+- [ ] Rewriting the entire thing
 - [ ] You should play a different wordle clone
 
 <img src="https://user-images.githubusercontent.com/51844807/216611721-ec41da0a-9b0f-4f0a-8fd7-879f0f14aba3.png" width="640" height="480">
